@@ -37,6 +37,7 @@
     damping: 0.37,
     stiffness: 0.1,
   });
+
   $: $widthPX = interpolate(distanceInput, widthOutput)(distance);
 
   let width: string;
