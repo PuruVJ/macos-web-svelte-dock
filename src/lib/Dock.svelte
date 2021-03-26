@@ -17,14 +17,14 @@
     "view-source",
   ];
 
-  let mouseX = 0;
+  let mouseX: number | null = null;
 </script>
 
 <section class="dock-container">
   <div
     class="dock-el"
     on:mousemove={(event) => (mouseX = event.x)}
-    on:mouseleave={() => (mouseX = 0)}
+    on:mouseleave={() => (mouseX = null)}
   >
     {#each apps as appID}
       <DockItem {mouseX} {appID} />

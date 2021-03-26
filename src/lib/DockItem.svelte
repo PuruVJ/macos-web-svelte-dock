@@ -5,7 +5,7 @@
   import ButtonBase from "./ButtonBase.svelte";
 
   export let appID: AppID;
-  export let mouseX: number;
+  export let mouseX: number | null;
 
   let el: HTMLImageElement;
 
@@ -37,13 +37,17 @@
     damping: 0.37,
     stiffness: 0.1,
   });
-  $: widthPX.set(interpolate(distanceInput, widthOutput)(distance));
+  $: $widthPX = interpolate(distanceInput, widthOutput)(distance);
 
   let width: string;
 
   $: width = `${$widthPX / 16}rem`;
 
+  let raf: number;
+
   function animate(mouseX: number) {
+    if (raf) cancelAnimationFrame(raf);
+
     if (el && mouseX !== null) {
       const rect = el.getBoundingClientRect();
 
@@ -61,7 +65,7 @@
     distance = beyondTheDistanceLimit;
   }
 
-  $: requestAnimationFrame(() => animate(mouseX));
+  $: raf = requestAnimationFrame(() => animate(mouseX));
 </script>
 
 <section>
