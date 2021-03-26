@@ -4,10 +4,14 @@
   import { spring } from "svelte/motion";
   import ButtonBase from "./ButtonBase.svelte";
 
+  /** Block 1 */
+
   export let appID: AppID;
   export let mouseX: number | null;
 
   let el: HTMLImageElement;
+
+  /** Block 2 */
 
   const baseWidth = 57.6;
   const distanceLimit = baseWidth * 6;
@@ -34,7 +38,7 @@
   let distance = beyondTheDistanceLimit;
 
   const widthPX = spring(baseWidth, {
-    damping: 0.37,
+    damping: 0.38,
     stiffness: 0.1,
   });
 
@@ -42,6 +46,8 @@
 
   let width: string;
   $: width = `${$widthPX / 16}rem`;
+
+  /** Block 3 */
 
   let raf: number;
 
