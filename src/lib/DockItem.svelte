@@ -41,14 +41,11 @@
   $: $widthPX = interpolate(distanceInput, widthOutput)(distance);
 
   let width: string;
-
   $: width = `${$widthPX / 16}rem`;
 
   let raf: number;
 
   function animate(mouseX: number) {
-    if (raf) cancelAnimationFrame(raf);
-
     if (el && mouseX !== null) {
       const rect = el.getBoundingClientRect();
 
