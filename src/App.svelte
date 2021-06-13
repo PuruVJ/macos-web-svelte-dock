@@ -1,5 +1,6 @@
 <script lang="ts">
   import Dock from "./lib/Dock.svelte";
+  // noiceee
 </script>
 
 <main>
