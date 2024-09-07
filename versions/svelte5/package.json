@@ -1,0 +1,20 @@
+{
+	"name": "svelte-dock-svelte-4",
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@sveltejs/vite-plugin-svelte": "4.0.0-next.7",
+		"svelte": "5.0.0-next.244",
+		"typescript": "^5.5.4",
+		"vite": "^5.4.3"
+	},
+	"dependencies": {
+		"popmotion": "^11.0.5",
+		"typecript": "0.0.1-security"
+	}
+}
