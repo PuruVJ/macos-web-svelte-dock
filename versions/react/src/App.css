@@ -1,0 +1,92 @@
+main {
+	max-width: 100vw;
+	height: 100vh;
+
+	background: url('/wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
+.dock-container {
+	margin-bottom: 0.3rem;
+	left: 0;
+	bottom: 0;
+	z-index: 9900;
+	position: fixed;
+
+	width: 100%;
+	height: 3.7rem;
+
+	padding: 0.4rem;
+
+	display: flex;
+	justify-content: center;
+}
+
+.dock-el {
+	backdrop-filter: blur(5px);
+	background-color: hsla(240, 3%, 11%, 0.4);
+
+	box-shadow: inset 0 0 0 0.2px rgb(245 245 245 / 70%), hsla(0, 0%, 0%, 0.3) 2px 5px 19px 7px;
+
+	padding: 0.3rem;
+
+	border-radius: 1.2rem;
+
+	height: 100%;
+
+	display: flex;
+	align-items: flex-end;
+}
+
+.dock-button {
+	height: 100%;
+	width: auto !important;
+
+	cursor: default !important;
+
+	transition: all 200ms ease-in;
+
+	transform-origin: bottom;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+button {
+	color: inherit;
+	text-decoration: none;
+	vertical-align: middle;
+
+	border: 0;
+	border-radius: 0;
+
+	outline: 0;
+
+	margin: 0;
+	padding: 0;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+
+	user-select: none;
+
+	appearance: none;
+
+	background-color: transparent;
+
+	-webkit-tap-highlight-color: transparent;
+
+	&:not(:disabled) {
+		cursor: pointer;
+	}
+}
+
+.app-icon {
+	width: 57.6px;
+	height: auto;
+}

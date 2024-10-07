@@ -22,6 +22,7 @@
 
 <section class="dock-container">
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
+	<!-- Leaving this as on: cuz Svelte LSP is just freaking out -->
 	<div
 		class="dock-el"
 		on:mousemove={(event) => {
